@@ -1,0 +1,64 @@
+# ============================================================
+#  Configurazione del blog
+#  Modifica i campi marcati con [DA PERSONALIZZARE]
+# ============================================================
+
+# --- Informazioni del sito ---
+title: "Quaderno di Volo"                    # [DA PERSONALIZZARE] Titolo del blog
+subtitle: "Appunti di un ingegnere"          # [DA PERSONALIZZARE] Sottotitolo
+description: >-
+  Un quaderno di appunti, saggi e riflessioni
+  su aerodinamica, didattica, letteratura e fotografia.
+author:
+  name: "Biagio Raucci"
+  email: "raucci@gmail.com"                      # [DA PERSONALIZZARE]
+
+# --- URL del sito ---
+# Se il repository si chiama "blog", il sito vive su braucci.github.io/blog
+url: "https://braucci.github.io"
+baseurl: "/blog"
+
+# --- Lingua ---
+lang: it-IT
+timezone: Europe/Rome
+
+# --- Tema ---
+theme: minima
+minima:
+  skin: classic
+  date_format: "%-d %B %Y"
+
+# --- Build & plugin ---
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+paginate: 5
+paginate_path: "/pagina/:num/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# --- File da escludere dalla build ---
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
+
+# --- Default per i post ---
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+      author: "Biagio Raucci"
+
+# --- Social (opzionale, compaiono in fondo alle pagine) ---
+github_username: braucci
+twitter_username: biagio

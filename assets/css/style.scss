@@ -1,0 +1,181 @@
+---
+# Front matter vuoto necessario perché Jekyll processi il file
+---
+
+@import "minima";
+
+/* ============================================================
+   PERSONALIZZAZIONI TIPOGRAFICHE
+   Estetica saggistica: serif elegante, colonna stretta,
+   spaziatura ariosa.
+   ============================================================ */
+
+/* --- Caratteri da Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* --- Variabili colore --- */
+:root {
+  --c-text:       #1f1c19;
+  --c-muted:      #6b6660;
+  --c-accent:     #8b3a2b;   /* terra di Siena, sobrio */
+  --c-bg:         #fbf8f3;   /* avorio caldo */
+  --c-rule:       #d9d2c4;
+  --c-code-bg:    #f0ebe0;
+}
+
+/* --- Tipografia di base --- */
+body {
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.65;
+  color: var(--c-text);
+  background-color: var(--c-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Larghezza della colonna di lettura --- */
+.wrapper {
+  max-width: 720px;
+  padding: 0 24px;
+}
+
+/* --- Intestazioni --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--c-text);
+}
+
+h1 { font-size: 2.2rem;  margin-top: 1.8em; }
+h2 { font-size: 1.55rem; margin-top: 1.6em; }
+h3 { font-size: 1.25rem; margin-top: 1.4em; }
+
+/* --- Header del sito --- */
+.site-header {
+  border-bottom: 1px solid var(--c-rule);
+  background-color: var(--c-bg);
+}
+
+.site-title,
+.site-title:visited {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  color: var(--c-text);
+}
+
+.site-nav .page-link {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-muted);
+}
+
+.site-nav .page-link:hover {
+  color: var(--c-accent);
+  text-decoration: none;
+}
+
+/* --- Link --- */
+a {
+  color: var(--c-accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(139, 58, 43, 0.25);
+  transition: border-color 0.15s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--c-accent);
+}
+
+/* --- Titoli dei post --- */
+.post-title,
+.post-list h3 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.post-meta {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--c-muted);
+  text-transform: uppercase;
+}
+
+/* --- Citazioni --- */
+blockquote {
+  border-left: 3px solid var(--c-accent);
+  font-style: italic;
+  color: var(--c-text);
+  padding-left: 1.2em;
+  margin-left: 0;
+  font-size: 1.05em;
+}
+
+/* --- Codice --- */
+code, pre {
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-size: 0.88em;
+}
+
+code {
+  background-color: var(--c-code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: var(--c-code-bg);
+  padding: 1em 1.2em;
+  border-radius: 4px;
+  border: 1px solid var(--c-rule);
+  overflow-x: auto;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* --- Linea orizzontale --- */
+hr {
+  border: 0;
+  border-top: 1px solid var(--c-rule);
+  margin: 2.5em auto;
+  width: 40%;
+}
+
+/* --- Lista archivio --- */
+.archive-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.archive-list li {
+  display: flex;
+  gap: 1em;
+  padding: 0.4em 0;
+  border-bottom: 1px dotted var(--c-rule);
+}
+
+.archive-list time {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  color: var(--c-muted);
+  min-width: 5em;
+  padding-top: 0.25em;
+}
+
+/* --- Footer --- */
+.site-footer {
+  border-top: 1px solid var(--c-rule);
+  background-color: var(--c-bg);
+  color: var(--c-muted);
+  font-size: 0.85rem;
+}
